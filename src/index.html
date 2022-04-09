@@ -1,14 +1,98 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+
+<head>
+  <title>Portal de Pago</title>
+  <link rel="stylesheet" href="./stylesheet/style.css">
+</head>
+
+<body>
+  <header>
+    <div>
+      <img class="logo" src="./images/logo.png">
+    </div>
+  </header>
+  <main class="main-container">
+    <section id="payment" class="payment">
+      <div id="payment-method" class="payment-method">
+        '' <div>
+          <div class="payment-options__method">
+            <h3>Selecciona tu medio de pago</h3>
+            <div class="payment-options__method-items">
+              <button onclick=""
+                class="payment-options__method-items-option payment-options__method-items-option--no-selected"
+                id="debito" type="button">
+                <div class="icon icon--debit"></div>
+                <span>Débito</span>
+              </button>
+              <button class="payment-options__method-items-option payment-options__method-items-option--selected"
+                id="credito" type="button">
+                <div class="icon .icon--credit"></div>
+                <span>Crédito</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div id="payment-data" class="payment-data">
+        <div>
+          <h3> Ingresa los datos de su tarjeta: </h3>
+          <div class="card-name">
+            <label for="card-name"> Nombre del Titular </label>
+            <div class="card-wrapper">
+              <input class="card-input" id="card-name" maxlength="16" size="16">
+            </div>
+          </div>
+          <div class="card-number">
+            <label for="card-number"> N&uacute;mero de Tarjeta </label>
+            <div class="card-wrapper">
+              <input oninput="this.value=appformatcardNumber(this.value)" class="card-input" type="text"
+                id="card-number" maxlength="16"><br><br placeholder="xxxx xxxx xxxx xxxx" size="16">
+              <span class="card-logo">
+                <img alt="Credit Card" src="./images/icons/card-number-default.svg">
+              </span>
+            </div>
+          </div>
+          <div class="payment-payment-data__exp-cvv">
+            <div class="card-exp">
+              <label for="card-exp"> Fecha de expiraci&oacute;n</label>
+              <div class="card-wrapper">
+                <input oninput="this.value=appformatexpirationdate(this.value)" class="card-input" id="card-exp"
+                  maxlength="5" name="fechaExpiracion" pattern="[0-9\/]*$" size="6" type="text" placeholder="MM/AA">
+
+              </div>
+            </div>
+            <div class="card-cvv">
+              <label for="card-cvv"> CVV </label>
+              <div class="card-wrapper">
+                <input autocomplete="off" class="card-input" id="card-cvv" name="cvv" pattern="[0-9]*" placeholder="・・・"
+                  type="text" maxlength="3">
+              </div>
+            </div>
+          </div>
+          <button class="submit" onclick="getCreditCardNumber()"> Pagar </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <h4> by Keymer Gamez </h4>
+    </div>
+  </footer>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span onclick="document.getElementById('myModal').style.display='none'" class="close">&times;</span><br>
+      <div>
+        <p id="pmyModal"></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="index.js"></script>
+</body>
+
 </html>
