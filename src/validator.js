@@ -30,7 +30,6 @@ const validator = {
       return creditCardNumber.slice(0, -4).replace(/./g, "#") + creditCardNumber.slice(-4); // P RGEXP
   }
 }
-
 export default validator;
 
 // 5491621005008394

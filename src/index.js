@@ -1,7 +1,9 @@
 import validator from './validator.js'
 
 document.getElementById("myModal").style.display = "none";
- 
+
+document.getElementById("payment-data-debit").style.display = "none"; 
+document.getElementById("payment-data-credit").style.display = "none";
 
 window.getCreditCardNumber = function getCreditCardNumber() {
     const creditCardNumber = document.getElementById("card-number").value;
@@ -35,4 +37,16 @@ window.appformatexpirationdate = function appformatexpirationdate(value) {
 }
 window.appformatcardNumber = function appformatcardNumber(value) {
   return value.replace(/^[a-zA-Z]*$/g,'');                            
+}
+
+
+
+window.debitCard = function debitCard() {
+  document.getElementById("payment-data-debit").style.display = "block"; 
+  document.getElementById("payment-data-credit").style.display = "none";
+}
+
+window.creditCard = function creditCard() {
+  document.getElementById("payment-data-debit").style.display = "none"; 
+  document.getElementById("payment-data-credit").style.display = "block";
 }

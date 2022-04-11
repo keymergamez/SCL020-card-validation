@@ -12,30 +12,34 @@
       <img class="logo" src="./images/logo.png">
     </div>
   </header>
+
+  
   <main class="main-container">
     <section id="payment" class="payment">
       <div id="payment-method" class="payment-method">
-        '' <div>
+         <div>
           <div class="payment-options__method">
             <h3>Selecciona tu medio de pago</h3>
             <div class="payment-options__method-items">
-              <button onclick=""
+              <button onclick="debitCard()"
                 class="payment-options__method-items-option payment-options__method-items-option--no-selected"
                 id="debito" type="button">
                 <div class="icon icon--debit"></div>
                 <span>Débito</span>
               </button>
-              <button class="payment-options__method-items-option payment-options__method-items-option--selected"
+              <button onclick="creditCard()"class="payment-options__method-items-option payment-options__method-items-option--selected"
                 id="credito" type="button">
                 <div class="icon .icon--credit"></div>
                 <span>Crédito</span>
+
+                
               </button>
             </div>
           </div>
         </div>
 
       </div>
-      <div id="payment-data" class="payment-data">
+      <div id="payment-data-credit" class="payment-data">
         <div>
           <h3> Ingresa los datos de su tarjeta: </h3>
           <div class="card-name">
@@ -43,6 +47,8 @@
             <div class="card-wrapper">
               <input class="card-input" id="card-name" maxlength="16" size="16">
             </div>
+             
+            
           </div>
           <div class="card-number">
             <label for="card-number"> N&uacute;mero de Tarjeta </label>
@@ -74,6 +80,23 @@
           <button class="submit" onclick="getCreditCardNumber()"> Pagar </button>
         </div>
       </div>
+
+      <div id="payment-data-debit" class="payment-data">
+        <div>
+          <h3> Ingresa los datos de su tarjeta: </h3>
+          <div class="card-number">
+            <label for="card-number"> N&uacute;mero de Tarjeta </label>
+            <div class="card-wrapper">
+              <input oninput="this.value=appformatcardNumber(this.value)" class="card-input" type="text"
+                id="card-number" maxlength="16"><br><br placeholder="xxxx xxxx xxxx xxxx" size="16">
+              <span class="card-logo">
+                <img alt="Credit Card" src="./images/icons/card-number-default.svg">
+              </span>
+            </div>
+          </div>
+        </div>
+        <button class="submit" onclick="getCreditCardNumber()"> Pagar </button>
+      </div>    
     </section>
   </main>
 

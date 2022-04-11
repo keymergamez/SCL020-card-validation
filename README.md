@@ -42,9 +42,7 @@ Trabajando en parejas aprenderán a construir una aplicación web que interactua
 con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
 como tecnologías.
 
-## 3. Objetivos de aprendizaje
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
 
 ### HTML
 
@@ -293,6 +291,9 @@ Este archivo debe contener las reglas de estilo. Queremos que escribas tus
 propias reglas, por eso NO está permitido el uso de frameworks de CSS
 (Bootstrap, materialize, etc).
 
+
+
+
 #### Funcionalmente (JavaScript - pruebas unitarias)
 
 * La lógica del proyecto debe estar implementada completamente en JavaScript.
@@ -434,3 +435,84 @@ Organización del Trabajo:
   esperamos que hagas todo eso desde este proyecto. Iremos profundizando poco a
   poco a lo largo del -_bootcamp_.
 * [Blog: cómo funciona el algoritmo de Luhn](http://www.quobit.mx/asi-funciona-el-algoritmo-de-luhn-para-generar-numeros-de-tarjetas-de-credito.html).
+
+
+
+######
+# ccom-jobs-elasticdump   ( card Validation) 
+### Descripcion.
+
+En este proyecto es una aplicación web que le permita a un
+usuario validar el número de una tarjeta de crédito. Además, se 
+implementa funcionalidad para ocultar todos los dígitos de una tarjeta menos
+los últimos cuatro.
+
+La temática que tomamos es un usuario validando su tarjeta en una compra de un cafe en la cafe
+Al iniciar el proyecto  primero debíamos dibujar a mano alzada un Mockup de lo que ibamos a hacer y considerar todas las necesidades de nuestra usuaria.
+Se realizo un prototipo en lapiz y papel, y trabajo en uno prototipo de ganma alta.
+
+# Requisitos
+- NPM
+
+# Run 
+npm install && npm start 
+
+## Documentacion Links
+
++ [Guía Completa de Flexbox desde 0](https://www.youtube.com/watch?v=F-KCncXMPk0&ab_channel=FalconMasters)
++ [FLEXBOX FROGGY](https://flexboxfroggy.com/#es)
++ [W3.CSS Modal,Botones CSS entre otros](https://www.w3schools.com/jsref/prop_style_display.asp)
++ [07. Expresiones Regulares - Ejemplo con JavaScript](https://www.youtube.com/watch?v=Yi4ThfsyJb0)
++ [Tutorial de GIT para principantes! - Usando la linea de comandos en Git](https://github.com/thiagobustamante/typescript-rest-swagger)
+https://www.deepl.com/en/translator
+
+
+
+
+
+
+
+#### Funcionalmente 
+
+## `src/validator.js`
+
+
+ implementamos el **objeto `validator`**, el cual ya se encuentra
+_exportado_ en el _boilerplate_. Este objeto (`validator`) contiene
+dos métodos (`isValid` y `maskify`):
+
+* **`validator.isValid(creditCardNumber)`**: `creditCardNumber` es un `string`
+con el número de tarjeta que se va a verificar. Esta función debe retornar un
+`boolean` dependiendo si es válida de acuerdo al [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn).
+
+* **`validator.maskify(creditCardNumber)`**: `creditCardNumber` es un `string` con
+el número de tarjeta y esta función debe retornar un `string` donde todos menos
+los últimos cuatro caracteres sean reemplazados por un numeral (`#`)
+Esta función deberá siempre mantener los últimos cuatro caracteres intactos, aún
+cuando el `string` sea de menor longitud.
+
+    Ejemplo de uso
+
+    ```js
+    maskify('5491621005008394') === '############8394'
+    maskify('############8394') ===  '#######8394'
+
+    ```
+
+##### `src/index.js`
+
+Acá escribirás todo el código que tenga que ver con la interacción del DOM
+(seleccionar, actualizar y manipular elementos del DOM y eventos).
+Es decir, en este archivo deberás invocar las funciones `isValid` y `maskify`
+según sea necesario para actualizar el resultado en la pantalla (UI).
+
+##### `test/validator.spec.js`
+
+En este archivo tendrás que completar las pruebas unitarias de las funciones
+`validator.isValid(creditCardNumber)` y `validator.maskify(creditCardNumber)`
+implementadas en `validator.js` utilizando [Jest](https://jestjs.io/es-ES/).
+
+
+
+
+

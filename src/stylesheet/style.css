@@ -63,11 +63,13 @@ footer {
   background:#e7aa5b;
   border-radius: 8px 0 0 8px;
   display: flex;
-  flex-basis: 40%;
-  max-width: 40%;
+  flex-basis: auto;
+  max-width: auto;
   padding: 40px 66px;
   box-sizing: border-box;
 }
+
+
 .payment-data {
   background: #e79a35;
   border-radius: 0 8px 8px 0;
@@ -77,6 +79,27 @@ footer {
   padding: 15px 20px;
   box-sizing: border-box;
 }
+.payment-options__method_button{
+  margin-bottom: auto;
+  display: flex;
+  border: #e79a35;
+  width: 50;
+
+}
+
+
+
+.payment-options__method-items-option {
+  padding: 30px;
+  margin-bottom: 20px;
+  padding: 5px; 
+  width: 50%;
+  border: thin solid rgb(71, 48, 18);
+  
+
+}
+
+
 .payment-payment-data__exp-cvv {
   display: flex;
   margin-bottom: 24px;
@@ -171,16 +194,16 @@ input {
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 1000%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 1000%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
 }
 
 /* Modal Content */
