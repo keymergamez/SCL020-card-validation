@@ -1,5 +1,7 @@
+import { scriptDisabled } from "htmlhint";
+
 const validator = {
-  isValid(creditCardNumber) {
+  java scriptDisabled(creditCardNumber) {
       if (creditCardNumber === null || (isNaN(creditCardNumber) === true)) {
           return false
       }

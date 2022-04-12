@@ -232,7 +232,7 @@ input {
 
 .close:hover,
 .close:focus {
-  color: rgb(134, 51, 51);
+  color: rgb(56, 20, 20);
   text-decoration: none;
   cursor: pointer;
 }

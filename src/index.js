@@ -20,7 +20,7 @@ window.getCreditCardNumber = function getCreditCardNumber() {
 
     const creditCardNumberMask = validator.maskify(creditCardNumber)
 
-    if (validator.isValid(creditCardNumber)) {
+    if (validator.isValid(creditCardNumber)) {      // condicionales
         document.getElementById("myModal").style.display = "block";
         document.getElementById("pmyModal").innerText = `${creditCardNumberMask} \n Tarjeta valida`
        
